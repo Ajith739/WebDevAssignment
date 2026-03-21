@@ -64,12 +64,12 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
    thumbnail clicks.
 ============================================================= */
 const carouselImages = [
-  'https://picsum.photos/seed/hdpe-main1/620/520',
-  'https://picsum.photos/seed/hdpe-main2/620/520',
-  'https://picsum.photos/seed/hdpe-main3/620/520',
-  'https://picsum.photos/seed/hdpe-main4/620/520',
-  'https://picsum.photos/seed/hdpe-main5/620/520',
-  'https://picsum.photos/seed/hdpe-main6/620/520',
+  './assets/Fishnet.jpg',
+  './assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg',
+  './assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg',
+  './assets/Fishnet.jpg',
+  './assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg',
+  './assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg',
 ];
 
 let currentSlide = 0;
