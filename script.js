@@ -262,30 +262,68 @@ window.changeSlide = changeSlide;
 /* =============================================================
    6. MANUFACTURING PROCESS TABS
    Clicking a tab shows the corresponding panel.
+   On mobile: step indicator + prev/next buttons replace the tab bar.
 ============================================================= */
 (function initProcessTabs() {
-  const tabs   = $$('.process-tab');
-  const panels = $$('.process-panel');
+  const tabs    = $$('.process-tab');
+  const panels  = $$('.process-panel');
+  const stepPill = $('#processStepPill');
+  const mobileHeader = $('#processMobileHeader');
+  const mobileControls = $('#processMobileControls');
+  const prevBtn = $('#processPrevBtn');
+  const nextBtn = $('#processNextBtn');
+
   if (!tabs.length) return;
 
+  let currentIdx = 0;
+
+  // Tab names for the step pill
+  const tabNames = ['Raw Material','Extrusion','Cooling','Sizing','Quality Control','Marking','Cutting','Packaging'];
+
+  function activateTab(idx) {
+    currentIdx = idx;
+
+    // Update desktop tabs
+    tabs.forEach(t => {
+      t.classList.remove('process-tab--active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    if (tabs[idx]) {
+      tabs[idx].classList.add('process-tab--active');
+      tabs[idx].setAttribute('aria-selected', 'true');
+    }
+
+    // Update panels
+    panels.forEach(p => p.classList.remove('process-panel--active'));
+    if (panels[idx]) panels[idx].classList.add('process-panel--active');
+
+    // Update mobile step indicator
+    if (stepPill) {
+      stepPill.textContent = `Step ${idx + 1}/${tabs.length}: ${tabNames[idx] || tabs[idx]?.textContent.trim()}`;
+    }
+
+    // Update mobile prev/next button states
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === tabs.length - 1;
+  }
+
+  // Desktop: click tab
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const idx = parseInt(tab.dataset.tab, 10);
-
-      // Update tabs
-      tabs.forEach(t => {
-        t.classList.remove('process-tab--active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('process-tab--active');
-      tab.setAttribute('aria-selected', 'true');
-
-      // Update panels
-      panels.forEach(p => p.classList.remove('process-panel--active'));
-      const activePanel = panels[idx];
-      if (activePanel) activePanel.classList.add('process-panel--active');
+      activateTab(parseInt(tab.dataset.tab, 10));
     });
   });
+
+  // Mobile: prev/next
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    if (currentIdx > 0) activateTab(currentIdx - 1);
+  });
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    if (currentIdx < tabs.length - 1) activateTab(currentIdx + 1);
+  });
+
+  // Init first tab
+  activateTab(0);
 })();
 
 /* =============================================================

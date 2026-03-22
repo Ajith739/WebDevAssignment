@@ -15,25 +15,6 @@
 </head>
 
 <body>
-
-  <!-- ============================================================
-       STICKY PRODUCT BAR (appears after scrolling past first fold)
-  ============================================================ -->
-  <div class="sticky-bar" id="stickyBar" aria-hidden="true">
-    <div class="sticky-bar__inner container">
-      <div class="sticky-bar__product">
-        <div class="sticky-bar__thumb">
-          <img src="./assets/Fishnet.jpg" alt="Product thumbnail" />
-        </div>
-        <div class="sticky-bar__details">
-          <span class="sticky-bar__name">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</span>
-          <span class="sticky-bar__price">₹4,80,000 – 7,90,000</span>
-        </div>
-      </div>
-      <button class="btn btn--primary" onclick="openModal('quoteModal')">Get Custom Quote</button>
-    </div>
-  </div>
-
   <!-- ============================================================
        NAVIGATION BAR
   ============================================================ -->
@@ -70,6 +51,24 @@
   </header>
 
   <!-- ============================================================
+       STICKY PRODUCT BAR (appears after scrolling past first fold)
+  ============================================================ -->
+  <div class="sticky-bar" id="stickyBar" aria-hidden="true">
+    <div class="sticky-bar__inner container">
+      <div class="sticky-bar__product">
+        <div class="sticky-bar__thumb">
+          <img src="./assets/Fishnet.jpg" alt="Product thumbnail" />
+        </div>
+        <div class="sticky-bar__details">
+          <span class="sticky-bar__name">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</span>
+          <span class="sticky-bar__price">₹4,80,000 – 7,90,000</span>
+        </div>
+      </div>
+      <button class="btn btn--primary" onclick="openModal('quoteModal')">Get Custom Quote</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
        MAIN CONTENT
   ============================================================ -->
   <main>
@@ -87,7 +86,7 @@
 
         <div class="hero__grid">
 
-          <!-- LEFT: Image Carousel -->
+          <!-- LEFT col (desktop): Carousel -->
           <div class="carousel" id="heroCarousel">
             <!-- Main image + zoom -->
             <div class="carousel__main" id="carouselMain">
@@ -135,8 +134,8 @@
             </div>
           </div><!-- /.carousel -->
 
-          <!-- RIGHT: Product Information -->
-          <div class="product-info">
+          <!-- RIGHT col (desktop) BLOCK A: badges + title + features -->
+          <div class="product-info product-info--details">
             <div class="product-details">
               <!-- Certification badges -->
               <div class="cert-badges">
@@ -154,7 +153,7 @@
                 </span>
               </div>
 
-              <h1 class="product-info__title">Premium HDPE Pipes & Coils for Modern Infrastructure</h1>
+              <h1 class="product-info__title">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</h1>
 
               <ul class="product-info__features">
                 <li><span class="feature-dot" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24"
@@ -183,21 +182,23 @@
                         stroke-linejoin="round" />
                     </svg></span>Flexible Installation</li>
               </ul>
-
             </div>
+          </div><!-- /.product-info--details -->
 
+          <!-- RIGHT col (desktop) BLOCK B: price card + CTAs -->
+          <div class="product-info product-info--purchase">
             <!-- Price card -->
             <div class="price-card">
               <div class="price-card__price">
                 <p class="price-card__label">Price Range</p>
-                <p class="price-card__value">₹4,80,000 - 7,90,000</p>
+                <p class="price-card__value">&#8377;4,80,000 - 7,90,000</p>
               </div>
               <div class="price-card__tags">
                 <span class="tag tag--yellow">Shipping: 6-12 days</span>
-                <span class="tag tag--green">Returns: If returned within 7 days</span>
+                <span class="tag tag--yellow">Returns: If returned within 7 days</span>
               </div>
-              <div class="price-card__cert-row">
-                <span class="tag tag--outline">Certifications: ISO Certified, BIS Certified</span>
+              <div class="price-card__cert">
+                <span class="tag tag--cert">Certifications: ISO Certified, BIS Certified</span>
               </div>
             </div>
 
@@ -206,29 +207,36 @@
               <button class="btn btn--primary btn--lg" onclick="openModal('quoteModal')"><span class="btn__text">Get
                   Custom Quote</span></button>
               <a href="#tech-specs" class="btn btn--outline btn--lg view-specs"><span class="btn__text_line">View
-                  Technical Specs</span><span aria-hidden="true"><svg class="w-4 h-4 arrow-btn" fill="none" stroke="currentColor" stroke-width="2">
-    <polyline points="8 4 16 12 8 20" />
-  </svg></span></a>
+                  Technical Specs</span> <span class="breadcrumb__sep" aria-hidden="true">&#8250;</span></a>
             </div>
-          </div><!-- /.product-info -->
+          </div><!-- /.product-info--purchase -->
 
         </div><!-- /.hero__grid -->
       </div><!-- /.container -->
 
-    <!-- ==== PARTNER LOGOS ==== -->
-      <div class="container">
-        <p class="partners__title">Trusted by Hundreds of Companies Globally</p>
-        <div class="partners__logos" aria-label="Partner logos">
-          <div class="partner-logo">
-            <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
-          </div>
-          <div class="partner-logo"><img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
-          </div>
-          <div class="partner-logo"><img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
-          </div>
-          <div class="partner-logo"><img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
-          </div>
-          <div class="partner-logo"><img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+      <!-- ==== PARTNER LOGOS ==== -->
+      <div class="partners__section">
+        <div class="container">
+          <p class="partners__title">Trusted by Hundreds of Companies Globally</p>
+          <div class="partners__logos" aria-label="Partner logos">
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
+            <div class="partner-logo">
+              <img src="./assets/image[Background].png" alt="Partner Logo" class="partners__logo" />
+            </div>
           </div>
         </div>
       </div>
@@ -296,9 +304,11 @@
         </div>
         <div class="section-center">
           <button class="btn btn--outline-white download-btn" onclick="openModal('catalogueModal')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3v13M7 11l5 5 5-5M5 20h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Download Full Technical Datasheet
           </button>
@@ -316,11 +326,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Shopping bag – Superior Chemical Resistance -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <path d="M16 10a4 4 0 01-8 0"/>
-              </svg>
+              <img src="./assets/icons/Vector.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Superior Chemical Resistance</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -329,12 +335,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Pen/tool – Exceptional Flexibility -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                <path d="M2 2l11.5 11.5"/>
-                <circle cx="11" cy="11" r="2"/>
-              </svg>
+              <img src="./assets/icons/Vector1.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Exceptional Flexibility &amp; Durability</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -343,12 +344,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Package/box – Leak-Proof Fusion -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/>
-                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                <line x1="12" y1="22.08" x2="12" y2="12"/>
-              </svg>
+              <img src="./assets/icons/Vector2.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Leak-Proof Fusion Welding</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -357,10 +353,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Settings gear – Cost-Effective -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
-              </svg>
+              <img src="./assets/icons/Vector3.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Cost-Effective Long-Term Solution</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -369,10 +362,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Gear/sustainable – Environmentally -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
-              </svg>
+              <img src="./assets/icons/Vector3.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Environmentally Sustainable</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -381,10 +371,7 @@
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">
               <!-- Gear/settings – Certified Quality -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3890" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
-              </svg>
+              <img src="./assets/icons/Vector3.svg" alt="feature icon" class="feature-card__icon-img" />
             </div>
             <h3>Certified Quality Assurance</h3>
             <p>HDPE pipes resist a wide range of chemicals, acids, and alkalis. Unlike metal pipes, they won't corrode,
@@ -481,9 +468,10 @@
             <p>Enter your email and an expert will share the catalogue with you.</p>
           </div>
           <div class="catalogue-card__form">
-            <input type="email" placeholder="Email Address" class="form-input"
+            <input type="email" placeholder="Email Address" class="form-input catalogue-email-input"
               aria-label="Email address for catalogue" />
-            <button class="btn btn--primary" onclick="openModal('catalogueModal')">Request Catalogue</button>
+            <button class="btn btn--primary request-catalogue" onclick="openModal('catalogueModal')">Request
+              Catalogue</button>
           </div>
         </div>
       </div>
@@ -500,10 +488,14 @@
           </div>
           <div class="slider-controls" role="group" aria-label="Slider navigation">
             <button class="slider-btn" id="appsPrev" aria-label="Previous application">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <path d="M19 12H5M11 19l-7-7 7-7" stroke="black" fill="none" />
+              </svg>
             </button>
             <button class="slider-btn" id="appsNext" aria-label="Next application">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="black" fill="none" />
+              </svg>
             </button>
           </div>
         </div>
@@ -517,15 +509,7 @@
             </div>
           </article>
           <article class="app-card" role="listitem">
-            <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Fishnet Manufacturing" loading="lazy" />
-            <div class="app-card__overlay">
-              <h3>Fishnet Manufacturing</h3>
-              <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads
-                used in modern packaging applications.</p>
-            </div>
-          </article>
-          <article class="app-card" role="listitem">
-            <img src="./assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg" alt="Fishnet Manufacturing" loading="lazy" />
+            <img src="./assets/Fishnet.jpg" alt="Fishnet Manufacturing" loading="lazy" />
             <div class="app-card__overlay">
               <h3>Fishnet Manufacturing</h3>
               <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads
@@ -541,7 +525,15 @@
             </div>
           </article>
           <article class="app-card" role="listitem">
-            <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Fishnet Manufacturing" loading="lazy" />
+            <img src="./assets/Fishnet.jpg" alt="Fishnet Manufacturing" loading="lazy" />
+            <div class="app-card__overlay">
+              <h3>Fishnet Manufacturing</h3>
+              <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads
+                used in modern packaging applications.</p>
+            </div>
+          </article>
+          <article class="app-card" role="listitem">
+            <img src="./assets/Fishnet.jpg" alt="Fishnet Manufacturing" loading="lazy" />
             <div class="app-card__overlay">
               <h3>Fishnet Manufacturing</h3>
               <p>High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads
@@ -559,22 +551,27 @@
         <p class="section-subtitle section-subtitle--center">Our state-of-the-art extrusion technology ensures
           consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
         <div class="process-card">
-          <!-- Tab navigation -->
+          <!-- Mobile: step indicator (replaces tabs on small screens) -->
+          <div class="process-mobile-header" id="processMobileHeader" aria-hidden="true">
+            <span class="process-step-pill" id="processStepPill">Step 1/8: Raw Material</span>
+          </div>
+          <!-- Tab navigation (desktop) -->
           <div class="process-tabs" role="tablist" aria-label="Manufacturing process steps">
-            <button class="process-tab process-tab--active" role="tab" aria-selected="true" data-tab="0">Raw Material</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <button class="process-tab process-tab--active" role="tab" aria-selected="true" data-tab="0">Raw
+              Material</button>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="1">Extrusion</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="2">Cooling</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="3">Sizing</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="4">Quality Control</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="5">Marking</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="6">Cutting</button>
-            <span class="tab-sep" aria-hidden="true">›</span>
+            <span class="tab-sep" aria-hidden="true">⎯</span>
             <button class="process-tab" role="tab" aria-selected="false" data-tab="7">Packaging</button>
           </div>
           <!-- Tab panels -->
@@ -590,9 +587,7 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
                 <img src="./assets/Fishnet.jpg" alt="Raw material selection" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="1">
@@ -606,9 +601,18 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-                <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Extrusion process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
+                <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Extrusion process"
+                  loading="lazy" />
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="2">
@@ -622,9 +626,17 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
                 <img src="./assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg" alt="Cooling process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="3">
@@ -638,9 +650,17 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
                 <img src="./assets/Fishnet.jpg" alt="Sizing process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="4">
@@ -654,9 +674,17 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
                 <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Quality control" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="5">
@@ -670,9 +698,17 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
                 <img src="./assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg" alt="Marking process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="6">
@@ -686,9 +722,17 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
                 <img src="./assets/Fishnet.jpg" alt="Cutting process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="7">
@@ -702,12 +746,38 @@
                 </ul>
               </div>
               <div class="process-panel__media">
-                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)" aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-                <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Packaging process" loading="lazy" />
-                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)" aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg></button>
+                <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Packaging process"
+                  loading="lazy" />
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg></button>
               </div>
             </div>
           </div><!-- /.process-panels -->
+          <!-- Mobile: prev/next navigation (replaces tabs on small screens) -->
+          <div class="process-mobile-controls" id="processMobileControls" aria-hidden="true">
+            <button class="process-nav-btn process-nav-btn--prev" id="processPrevBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M11 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </button>
+            <button class="process-nav-btn process-nav-btn--next" id="processNextBtn">
+              Next
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div><!-- /.process-card -->
       </div>
     </section>
@@ -720,7 +790,8 @@
           setting machines, we deliver complete solutions for modern textile manufacturing.</p>
         <div class="testimonials__slider" id="testimonialsSlider" role="list">
           <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__quote" aria-hidden="true">"</div>
+            <div class="testimonial-card__quote" aria-hidden="true"><img src="./assets/icons/symbol.svg" alt="symbol" />
+            </div>
             <h3>Revolutionized our FIBC production efficiency!</h3>
             <p>Industries' TFO machines have revolutionized our FIBC production efficiency. The precision engineering
               delivers the consistent yarn strength critical for our bulk container applications.</p>
@@ -733,7 +804,8 @@
             </div>
           </article>
           <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__quote" aria-hidden="true">"</div>
+            <div class="testimonial-card__quote" aria-hidden="true"><img src="./assets/icons/symbol.svg" alt="symbol" />
+            </div>
             <h3>Excellent support for specialized applications.</h3>
             <p>The durability and performance of Meera's fishnet processing equipment has significantly improved our
               marine product quality. Excellent support for specialized applications.</p>
@@ -746,7 +818,8 @@
             </div>
           </article>
           <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__quote" aria-hidden="true">"</div>
+            <div class="testimonial-card__quote" aria-hidden="true"><img src="./assets/icons/symbol.svg" alt="symbol" />
+            </div>
             <h3>Excellent support for specialized applications.</h3>
             <p>The durability and performance of Meera's fishnet processing equipment has significantly improved our
               marine product quality. Excellent support for specialized applications.</p>
@@ -759,7 +832,8 @@
             </div>
           </article>
           <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__quote" aria-hidden="true">"</div>
+            <div class="testimonial-card__quote" aria-hidden="true"><img src="./assets/icons/symbol.svg" alt="symbol" />
+            </div>
             <h3>Provides the exact specifications we need!</h3>
             <p>For our technical textile applications, Meera's specialized machinery provides the exact specifications
               we need. Their understanding of automotive textile requirements is exceptional.</p>
@@ -792,7 +866,9 @@
               <img src="./assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg" alt="HDPE Fittings and Accessories"
                 loading="lazy" />
             </div>
-            <button class="btn btn--outline-full">Learn More</button>
+            <div class="additional">
+              <button class="btn btn--outline-full portfolio-card__btn">Learn More</button>
+            </div>
           </article>
           <article class="portfolio-card">
             <div class="portfolio-card__body">
@@ -804,7 +880,9 @@
               <img src="./assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg" alt="Professional Installation Services"
                 loading="lazy" />
             </div>
-            <button class="btn btn--outline-full">Learn More</button>
+            <div class="additional">
+              <button class="btn btn--outline-full portfolio-card__btn">Learn More</button>
+            </div>
           </article>
           <article class="portfolio-card">
             <div class="portfolio-card__body">
@@ -815,7 +893,9 @@
             <div class="portfolio-card__img">
               <img src="./assets/Fishnet.jpg" alt="PE-RT Heating Pipes" loading="lazy" />
             </div>
-            <button class="btn btn--outline-full">Learn More</button>
+            <div class="additional">
+              <button class="btn btn--outline-full portfolio-card__btn">Learn More</button>
+            </div>
           </article>
         </div>
         <!-- Expert banner -->
@@ -847,10 +927,11 @@
             <span>HDPE Pipe Installation Manual (PDF)</span>
             <a href="#" class="download-link" onclick="event.preventDefault(); openModal('catalogueModal')">
               Download PDF
-              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
             </a>
           </div>
@@ -858,10 +939,11 @@
             <span>Maintenance &amp; Inspection Handbook (PDF)</span>
             <a href="#" class="download-link" onclick="event.preventDefault(); openModal('catalogueModal')">
               Download PDF
-              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
             </a>
           </div>
@@ -869,10 +951,11 @@
             <span>Engineering Specifications Sheet (PDF)</span>
             <a href="#" class="download-link" onclick="event.preventDefault(); openModal('catalogueModal')">
               Download PDF
-              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                stroke="#2B3890" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
             </a>
           </div>
@@ -890,8 +973,7 @@
               requirements.</p>
             <hr class="cta-divider" />
             <p class="cta-contact">For immediate assistance, feel free to give us a direct call at
-              <strong>+91-XXX-XXX-XXXX.</strong> You can also send us a quick email at <a
-                href="mailto:info@meeraind.com">info@meeraind.com</a>
+              <strong>+91-XXX-XXX-XXXX.</strong> You can also send us a quick email at <a href="mailto:info@meeraind.com">info@meeraind.com</a>
             </p>
           </div>
           <div class="cta-form-card">
@@ -964,56 +1046,30 @@
         <div class="footer__col footer__col--contact">
           <h4>Contact</h4>
           <p>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0Z" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <img src="./assets/icons/contact/location.svg" alt="Location" />
             2126, Road No. 2, GIDC Sachin, Surat - 394 230 Gujarat, India
           </p>
           <p>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92Z"
-                stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <img src="./assets/icons/contact/contact.svg" alt="Phone" />
             +91-XXX-XXX-XXXX
           </p>
           <p>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"
-                stroke="currentColor" stroke-width="1.5" />
-              <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5" />
-            </svg>
+            <img src="./assets/icons/contact/mail.svg" alt="Mail" />
             info@meeraind.com
           </p>
           <p>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M3 18v-6a9 9 0 0118 0v6" stroke="currentColor" stroke-width="1.5" />
-              <path
-                d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5ZM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5Z"
-                stroke="currentColor" stroke-width="1.5" />
-            </svg>
-            support@meeraind.com
+            <img src="./assets/icons/contact/support.svg" alt="Support" />
+            info@meeraind.com
           </p>
           <div class="footer__social">
             <a href="#" class="social-icon" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
+              <img src="./assets/icons/contact/linkedin.svg" alt="LinkedIn" />
             </a>
             <a href="#" class="social-icon" aria-label="Twitter/X">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
+              <img src="./assets/icons/contact/x.svg" alt="Twitter" />
             </a>
             <a href="#" class="social-icon" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-              </svg>
+              <img src="./assets/icons/contact/insta.svg" alt="Instagram" />
             </a>
           </div>
         </div>
@@ -1080,6 +1136,7 @@
           <select class="phone-select" aria-label="Country code">
             <option>+91</option>
             <option>+1</option>
+            <option>+1</option>
             <option>+44</option>
             <option>+971</option>
           </select>
@@ -1092,7 +1149,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
