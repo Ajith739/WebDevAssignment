@@ -599,7 +599,15 @@
                 </ul>
               </div>
               <div class="process-panel__media">
+                <button class="carousel__arrow carousel__arrow--prev" onclick="shiftProcessImg(-1)"
+                  aria-label="Previous process image"><svg width="20" height="20" viewBox="0 0 24 24">
+                <path d="M19 12H5M11 19l-7-7 7-7" stroke="black" fill="none" />
+              </svg></button>
                 <img src="./assets/Fishnet.jpg" alt="Raw material selection" loading="lazy" />
+                <button class="carousel__arrow carousel__arrow--next" onclick="shiftProcessImg(1)"
+                  aria-label="Next process image"><svg width="20" height="20" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="black" fill="none" />
+              </svg></button>
               </div>
             </div>
             <div class="process-panel" role="tabpanel" data-panel="1">
@@ -1067,11 +1075,11 @@
           </p>
           <p>
             <img src="./assets/icons/contact/mail.svg" alt="Mail" />
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8a1a6aea788a5adadbaa9a1a6ace6aba7a5">[email&#160;protected]</a>
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2cbccc4cde2cfc7c7d0c3cbccc68cc1cdcf">[email&#160;protected]</a>
           </p>
           <p>
             <img src="./assets/icons/contact/support.svg" alt="Support" />
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd2d5ddd4fbd6dedec9dad2d5df95d8d4d6">[email&#160;protected]</a>
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="691a1c1919061b1d29040c0c1b0800070d470a0604">[email&#160;protected]</a>
           </p>
           <div class="footer__social">
             <a href="#" class="social-icon" aria-label="LinkedIn">
@@ -1148,5 +1156,21 @@
           <select class="phone-select" aria-label="Country code">
             <option>+91</option>
             <option>+1</option>
-            <option>+1</option>
-            <option>+44</opti
+            <option>+44</option>
+            <option>+971</option>
+          </select>
+          <input type="tel" placeholder="Phone Number" class="form-input" aria-label="Phone number" />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message (Optional)" class="form-input" rows="3" aria-label="Message" style="resize:vertical;"></textarea>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--primary btn--full">Request a Call Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

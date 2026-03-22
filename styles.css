@@ -1934,7 +1934,6 @@ section {
   color: var(--clr-text-md);
   background: var(--clr-white);
   transition: background var(--tr);
-  border-bottom: 1px solid #E5E7EB;
 }
 
 .resource-item:last-child {
