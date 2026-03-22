@@ -65,11 +65,11 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 ============================================================= */
 const carouselImages = [
   './assets/Fishnet.jpg',
-  './assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg',
-  './assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg',
+  './assets/image1.jpg',
+  './assets/image2.jpg',
   './assets/Fishnet.jpg',
-  './assets/91928c6beda9d501d1c26ae0cac9daf21cf34169.jpg',
-  './assets/c86f8dae3967ca8220a06b7745aa763ed9a1437a.jpg',
+  './assets/image1.jpg',
+  './assets/image2.jpg',
 ];
 
 let currentSlide = 0;
