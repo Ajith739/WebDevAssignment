@@ -12,8 +12,11 @@ This project demonstrates modern UI design, responsive layouts, DOM manipulation
 
 Inside your project:
 
-```bash
-assets/homepage-1.png
+![hero](assets/homepage-1.png)
+
+![sample](assets/homepage-2.png)
+
+![sample](assets/homepage-3.png)
 
 # 🚀 Live Features
 
