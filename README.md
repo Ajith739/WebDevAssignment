@@ -6,9 +6,7 @@ This project demonstrates modern UI design, responsive layouts, DOM manipulation
 
 ---
 
-# 🖼️ How to Add Images to README
-
-## ✅ Step 1 — Create Images Folder
+## 📸 Screenshots
 
 Inside your project:
 
